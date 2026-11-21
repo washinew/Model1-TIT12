@@ -25,7 +25,7 @@ public partial class MapDbContext : DbContext
     {
         modelBuilder.Entity<Congestion>(entity =>
         {
-            entity.HasKey(e => e.CongestionId).HasName("PK__Congesti__00400BFCF507A76A");
+            entity.HasKey(e => e.CongestionId).HasName("PK__Congesti__00400BFC0C2EADE9");
 
             entity.Property(e => e.CongestionLevel).HasMaxLength(20);
             entity.Property(e => e.DelayTime).HasMaxLength(30);
@@ -40,7 +40,7 @@ public partial class MapDbContext : DbContext
 
         modelBuilder.Entity<Restaurant>(entity =>
         {
-            entity.HasKey(e => e.RestaurantId).HasName("PK__Restaura__87454C9522A51784");
+            entity.HasKey(e => e.RestaurantId).HasName("PK__Restaura__87454C95188BCF76");
 
             entity.Property(e => e.Address).HasMaxLength(200);
             entity.Property(e => e.BusinessHours).HasMaxLength(30);
@@ -56,7 +56,7 @@ public partial class MapDbContext : DbContext
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79CE1418F0E8");
+            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79CEBDD7EF42");
 
             entity.Property(e => e.BusinessType).HasMaxLength(20);
             entity.Property(e => e.ImageUrls).HasMaxLength(1000);
@@ -73,7 +73,7 @@ public partial class MapDbContext : DbContext
 
         modelBuilder.Entity<ScenicSpot>(entity =>
         {
-            entity.HasKey(e => e.SpotId).HasName("PK__ScenicSp__61645F87DA42F4A5");
+            entity.HasKey(e => e.SpotId).HasName("PK__ScenicSp__61645F87A5AE0ED1");
 
             entity.Property(e => e.Address).HasMaxLength(200);
             entity.Property(e => e.Description).HasMaxLength(500);
@@ -91,9 +91,9 @@ public partial class MapDbContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C314B53F1");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4C47B9296E");
 
-            entity.HasIndex(e => e.Username, "UQ__Users__536C85E41BF7F776").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E49216EAA8").IsUnique();
 
             entity.Property(e => e.Avatar).HasMaxLength(200);
             entity.Property(e => e.CreateTime)
